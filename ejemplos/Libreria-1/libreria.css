@@ -1,0 +1,12 @@
+.libreria {
+  display: flex;
+  gap: 20px;
+}
+
+.libreria__w-listado {
+  flex-grow: 1;
+}
+
+.libreria__w-form {
+  flex-grow: 1;
+}

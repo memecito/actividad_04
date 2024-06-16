@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" class="the-form" id="formulario">
+        <div class="cl-tareas" id="id-tareas" >
+            <label for="task">Tareas</label>
+            <input type="text" id="task"/>
+        
+        </div>
+        <button>Enviar</button>
+        <button type="reset">Reset</button>
+    </form>
+    <ul id="lista">
+        <li></li>
+    </ul>
+    <button form="formulario" type="submit">enviar 2</button> 
+    <a href="https://www.google.es" class="enlace">Enlace</a>
+</body>
+<script>
+    document.addEventListener("DOMContentLoaded",()=>{
+        
+        // const enlace= document.querySelector(".enlace");
+        // enlace.addEventListener("click",(ev)=>{
+        //     ev.preventDefault()
+        //     console.log("click en enlace!")
+        //     window.location.href="https://turgranada.es";
+        // });
+        
+        document.querySelector(".the-form");
+        const form=document.querySelector(".the-form")
+        form.addEventListener("submit",(ev)=>{
+            ev.preventDefault();
+            const form=ev.target;
+            const task = form.querySelector("#task").value
+            if(task!==""){
+            const nueva_tarea=document.createElement("li");
+            nueva_tarea.textContent=task;
+            nueva_tarea.classList.add="cl-lista"
+            document.querySelector("#lista").append(nueva_tarea)
+           
+                form.reset();
+            }
+        })
+    })
+
+    
+</script>
+</html>
